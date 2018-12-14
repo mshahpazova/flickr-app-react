@@ -9,11 +9,13 @@ function stripMarkup(html) {
 
 const Photo = props => (
   <div className="Photo">
-    <img src={`${props.media}`} />
-    <a href={`${props.link}`}>{props.title}</a> by
-    <span>{props.author}</span>
-    <p>{stripMarkup(props.description)}</p>
-    <div>{props.tags}</div>
+    <div className="Frame">
+      <img src={`${props.media}`} />
+      <a href={`${props.link}`}>{props.title}</a> by
+      <span>{props.author}</span>
+      <p>{stripMarkup(props.description)}</p>
+      <div>{props.tags}</div>
+    </div>
   </div>
 );
 
