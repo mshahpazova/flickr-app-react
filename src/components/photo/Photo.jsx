@@ -4,17 +4,18 @@ import './Photo.css';
 
 function stripMarkup(html) {
   var regex = /(<([^>]+)>)/ig;
-  return html.replace(regex, "");
+  var text = html.replace(regex, "");
+  text = text.substr(0, 30);
+  return text;
 }
 
 const Photo = props => (
   <div className="Photo">
     <div className="Frame">
       <img src={`${props.media}`} />
-      <a href={`${props.link}`}>{props.title}</a> by
-      <span>{props.author}</span>
+      <a href={`${props.link}`}>{props.title}</a> by <span>{props.author}</span>
       <p>{stripMarkup(props.description)}</p>
-      <div>{props.tags}</div>
+      <div>Tags: {props.tags}</div>
     </div>
   </div>
 );

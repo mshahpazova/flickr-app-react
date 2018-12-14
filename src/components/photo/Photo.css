@@ -5,11 +5,15 @@
 }
 
 .Frame {
+  height: 100%;
+  padding: 10px;
   border: 1px solid black;
 }
 
 .Photo img {
   display: block;
+  max-height: 200px;
+  max-width: 100%;
   margin: auto;
 }
 

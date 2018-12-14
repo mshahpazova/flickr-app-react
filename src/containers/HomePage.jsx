@@ -14,7 +14,6 @@ class HomePage extends Component {
     const uri = 'https://api.flickr.com/services/feeds/photos_public.gne?format=json&jsoncallback=?';
 
     jquery.getJSON(uri, (response) => {
-      debugger;
       this.setState({ photos: response.items });
     });
   };
