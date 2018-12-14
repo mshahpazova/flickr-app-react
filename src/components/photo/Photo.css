@@ -1,0 +1,22 @@
+.Photo {
+  display: block;
+  width: 100%;
+  border: 1px solid black;
+}
+
+.Photo img {
+  display: block;
+  margin: auto;
+}
+
+@media (min-width: 400px) {
+  .Photo {
+    width: 50%;
+  }
+}
+
+@media (min-width: 800px) {
+  .Photo {
+    width: 25%;
+  }
+}
